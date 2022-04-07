@@ -1,29 +1,29 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Gehaltsrechner.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/BaseGehalt.feature");
 formatter.feature({
-  "name": "GehaltsrechnerPage",
+  "name": "Gehalt rechnen",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Gehalt for different infos",
+  "name": "Search salary for different \u003cJobtitle\u003e",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@zz"
+      "name": "@vb"
     }
   ]
 });
 formatter.step({
-  "name": "the user is on \"Gehaltsrechner\" Page",
+  "name": "the user is on the start page",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "the user enters following infos \"\u003cBruttolohn\u003e\" \"\u003cJahresbeitrag\u003e\" \"\u003cBerufsbezeichnung\u003e\" \"\u003cJahr\u003e\" \"\u003cZeitraum\u003e\" \"\u003cGeburtsjahr\u003e\" \"\u003cSteurklasse\u003e\" \"\u003cFaktor\u003e\"  \"\u003cRentenversicherungspflicht\u003e\" \"\u003cKirchensteuer\u003e\" \"\u003cWohnort\u003e\" \"\u003cBundesland\u003e\" \"\u003cKrankenkasse\u003e\" \"\u003cKassensatz\u003e\" \"\u003cKinder\u003e\"\u003cKinderfreibetrag\u003e \"",
+  "name": "the user searches for \"\u003cJobtitle\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "name": "the result should be \"\u003cIhrergebnis\u003e\"",
+  "name": "the min salary should be \"\u003cGehalt\u003e\"",
   "keyword": "Then "
 });
 formatter.examples({
@@ -33,53 +33,43 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Bruttolohn",
-        "Jahresbeitrag",
-        "Berufsbezeichnung",
-        "Jahr",
-        "Zeitraum",
-        "Geburtsjahr",
-        "Steurklasse",
-        "Faktor",
-        "Rentenversicherungspflicht",
-        "Kirchensteuer",
-        "Wohnort",
-        "Bundesland",
-        "Krankenkasse",
-        "Kassensatz",
-        "Kinder",
-        "Kinderfreibetrag"
+        "Jobtitle",
+        "Gehalt"
       ]
     },
     {
       "cells": [
-        "55000",
-        "55000",
-        "Test Automation Engineer",
-        "2021",
-        "Jahr",
-        "1984",
-        "III",
-        "",
-        "Ja (West)",
-        "Nein",
-        "hamburg",
-        "Hamburg",
-        "Gesetzlich krankenversichert",
-        "",
-        "Ja",
-        "2"
+        "Softwaretester",
+        "2.929 €"
+      ]
+    },
+    {
+      "cells": [
+        "Investment Manager",
+        "5.157 €"
+      ]
+    },
+    {
+      "cells": [
+        "Arzt / Ärztin",
+        "5.139 €"
+      ]
+    },
+    {
+      "cells": [
+        "Scrum Master",
+        "3.899 €"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Gehalt for different infos",
+  "name": "Search salary for different Softwaretester",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@zz"
+      "name": "@vb"
     }
   ]
 });
@@ -87,31 +77,169 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user is on \"Gehaltsrechner\" Page",
+  "name": "the user is on the start page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_user_is_on_Page(java.lang.String)"
+  "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user enters following infos \"55000\" \"55000\" \"Test Automation Engineer\" \"2021\" \"Jahr\" \"1984\" \"III\" \"\"  \"Ja (West)\" \"Nein\" \"hamburg\" \"Hamburg\" \"Gesetzlich krankenversichert\" \"\" \"Ja\"2 \"",
+  "name": "the user searches for \"Softwaretester\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.gehaltsvergleich.step_definitions.GehaltsrechnerStepDefs.the_user_enters_following_infos_Ja(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)"
+  "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the result should be \"\u003cIhrergebnis\u003e\"",
+  "name": "the min salary should be \"2.929 €\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.gehaltsvergleich.step_definitions.GehaltsrechnerStepDefs.the_result_should_be(java.lang.String)"
+  "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Search salary for different Investment Manager",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@vb"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the start page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user searches for \"Investment Manager\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the min salary should be \"5.157 €\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Search salary for different Arzt / Ärztin",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@vb"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the start page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user searches for \"Arzt / Ärztin\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the min salary should be \"5.139 €\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Search salary for different Scrum Master",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@vb"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the start page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user searches for \"Scrum Master\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the min salary should be \"3.899 €\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

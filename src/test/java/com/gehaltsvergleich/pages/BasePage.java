@@ -16,7 +16,11 @@ public  class BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
+   @FindBy(css = "#beruf2")
+   public WebElement beruf;
 
+    @FindBy(xpath = "//button[@data-submissionid='Button Jobsuche']")
+    public WebElement berechnenBtn;
 
     @FindBy(css = "#ccmgt_explicit_accept")
     public WebElement Alles_akzeptieren;

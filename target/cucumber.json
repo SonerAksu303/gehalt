@@ -1,9 +1,9 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-04-07T13:14:24.904Z",
+        "start_timestamp": "2022-04-07T15:54:52.102Z",
         "before": [
           {
             "result": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 10,
-        "name": "Gehalt for different infos",
+        "line": 11,
+        "name": "Search salary for different Softwaretester",
         "description": "",
-        "id": "gehaltsrechnerpage;gehalt-for-different-infos;;2",
+        "id": "gehalt-rechnen;search-salary-for-different-\u003cjobtitle\u003e;;2",
         "after": [
           {
             "result": {
-              "duration": 140037100,
+              "duration": 115163500,
               "status": "passed"
             },
             "match": {
@@ -34,127 +34,320 @@
         "steps": [
           {
             "result": {
-              "duration": 9163743300,
+              "duration": 5746740700,
               "status": "passed"
             },
             "line": 5,
-            "name": "the user is on \"Gehaltsrechner\" Page",
+            "name": "the user is on the start page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Gehaltsrechner\"",
-                  "offset": 15
-                }
-              ],
-              "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_user_is_on_Page(java.lang.String)"
+              "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1384600400,
+              "duration": 1342512400,
               "status": "passed"
             },
             "line": 6,
-            "name": "the user enters following infos \"55000\" \"55000\" \"Test Automation Engineer\" \"2021\" \"Jahr\" \"1984\" \"III\" \"\"  \"Ja (West)\" \"Nein\" \"hamburg\" \"Hamburg\" \"Gesetzlich krankenversichert\" \"\" \"Ja\"2 \"",
+            "name": "the user searches for \"Softwaretester\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"55000\"",
-                  "offset": 32
-                },
-                {
-                  "val": "\"55000\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"Test Automation Engineer\"",
-                  "offset": 48
-                },
-                {
-                  "val": "\"2021\"",
-                  "offset": 75
-                },
-                {
-                  "val": "\"Jahr\"",
-                  "offset": 82
-                },
-                {
-                  "val": "\"1984\"",
-                  "offset": 89
-                },
-                {
-                  "val": "\"III\"",
-                  "offset": 96
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 102
-                },
-                {
-                  "val": "\"Ja (West)\"",
-                  "offset": 106
-                },
-                {
-                  "val": "\"Nein\"",
-                  "offset": 118
-                },
-                {
-                  "val": "\"hamburg\"",
-                  "offset": 125
-                },
-                {
-                  "val": "\"Hamburg\"",
-                  "offset": 135
-                },
-                {
-                  "val": "\"Gesetzlich krankenversichert\"",
-                  "offset": 145
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 176
-                },
-                {
-                  "val": "2",
-                  "offset": 183
+                  "val": "\"Softwaretester\"",
+                  "offset": 22
                 }
               ],
-              "location": "com.gehaltsvergleich.step_definitions.GehaltsrechnerStepDefs.the_user_enters_following_infos_Ja(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)"
+              "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 54006300,
+              "duration": 17820500,
               "status": "passed"
             },
             "line": 7,
-            "name": "the result should be \"\u003cIhrergebnis\u003e\"",
+            "name": "the min salary should be \"2.929 €\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"\u003cIhrergebnis\u003e\"",
-                  "offset": 21
+                  "val": "\"2.929 €\"",
+                  "offset": 25
                 }
               ],
-              "location": "com.gehaltsvergleich.step_definitions.GehaltsrechnerStepDefs.the_result_should_be(java.lang.String)"
+              "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@zz"
+            "name": "@vb"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-07T15:54:59.360Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Search salary for different Investment Manager",
+        "description": "",
+        "id": "gehalt-rechnen;search-salary-for-different-\u003cjobtitle\u003e;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 121321200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5237671200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the start page",
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 650458500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user searches for \"Investment Manager\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Investment Manager\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16988000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the min salary should be \"5.157 €\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5.157 €\"",
+                  "offset": 25
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@vb"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-07T15:55:05.389Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Search salary for different Arzt / Ärztin",
+        "description": "",
+        "id": "gehalt-rechnen;search-salary-for-different-\u003cjobtitle\u003e;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 111135900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5278259300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the start page",
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1275916700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user searches for \"Arzt / Ärztin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Arzt / Ärztin\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15654000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the min salary should be \"5.139 €\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5.139 €\"",
+                  "offset": 25
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@vb"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-07T15:55:12.070Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Search salary for different Scrum Master",
+        "description": "",
+        "id": "gehalt-rechnen;search-salary-for-different-\u003cjobtitle\u003e;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 128874500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5241043900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the start page",
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.NavigationMenuStepDefs.the_user_is_on_the_start_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1011212000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user searches for \"Scrum Master\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Scrum Master\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.BaseGehaltStepDefs.the_user_searches_for(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16249400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the min salary should be \"3.899 €\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3.899 €\"",
+                  "offset": 25
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_min_salary_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@vb"
           }
         ]
       }
     ],
-    "name": "GehaltsrechnerPage",
+    "name": "Gehalt rechnen",
     "description": "",
-    "id": "gehaltsrechnerpage",
+    "id": "gehalt-rechnen",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Gehaltsrechner.feature",
+    "uri": "file:src/test/resources/features/BaseGehalt.feature",
     "tags": []
   }
 ]

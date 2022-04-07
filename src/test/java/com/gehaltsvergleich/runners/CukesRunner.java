@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = "com/gehaltsvergleich/step_definitions",
         dryRun = false,
-        tags = "@zz"
+        tags = "@vb"
 )
 
 
