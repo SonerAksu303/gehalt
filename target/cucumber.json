@@ -1,0 +1,160 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-07T13:14:24.904Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Gehalt for different infos",
+        "description": "",
+        "id": "gehaltsrechnerpage;gehalt-for-different-infos;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 140037100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.gehaltsvergleich.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9163743300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on \"Gehaltsrechner\" Page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Gehaltsrechner\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.GehälterStepDefs.the_user_is_on_Page(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1384600400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user enters following infos \"55000\" \"55000\" \"Test Automation Engineer\" \"2021\" \"Jahr\" \"1984\" \"III\" \"\"  \"Ja (West)\" \"Nein\" \"hamburg\" \"Hamburg\" \"Gesetzlich krankenversichert\" \"\" \"Ja\"2 \"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"55000\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"55000\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"Test Automation Engineer\"",
+                  "offset": 48
+                },
+                {
+                  "val": "\"2021\"",
+                  "offset": 75
+                },
+                {
+                  "val": "\"Jahr\"",
+                  "offset": 82
+                },
+                {
+                  "val": "\"1984\"",
+                  "offset": 89
+                },
+                {
+                  "val": "\"III\"",
+                  "offset": 96
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 102
+                },
+                {
+                  "val": "\"Ja (West)\"",
+                  "offset": 106
+                },
+                {
+                  "val": "\"Nein\"",
+                  "offset": 118
+                },
+                {
+                  "val": "\"hamburg\"",
+                  "offset": 125
+                },
+                {
+                  "val": "\"Hamburg\"",
+                  "offset": 135
+                },
+                {
+                  "val": "\"Gesetzlich krankenversichert\"",
+                  "offset": 145
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 176
+                },
+                {
+                  "val": "2",
+                  "offset": 183
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.GehaltsrechnerStepDefs.the_user_enters_following_infos_Ja(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54006300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the result should be \"\u003cIhrergebnis\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\u003cIhrergebnis\u003e\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.gehaltsvergleich.step_definitions.GehaltsrechnerStepDefs.the_result_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@zz"
+          }
+        ]
+      }
+    ],
+    "name": "GehaltsrechnerPage",
+    "description": "",
+    "id": "gehaltsrechnerpage",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Gehaltsrechner.feature",
+    "tags": []
+  }
+]
