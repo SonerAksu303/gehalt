@@ -1,10 +1,15 @@
 package com.gehaltsvergleich.step_definitions;
 
 import com.gehaltsvergleich.pages.GehaltsrechnerPage;
+import com.gehaltsvergleich.utilities.BrowserUtils;
+import com.sun.source.tree.IfTree;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.Locale;
 
 public class GehaltsrechnerStepDefs {
 
@@ -17,14 +22,26 @@ public class GehaltsrechnerStepDefs {
         new GehaltsrechnerPage().berufbezeichnung.sendKeys(string3);
         Select select = new Select(new GehaltsrechnerPage().jahrIndex);
         select.selectByValue(string4);
-        new GehaltsrechnerPage().zeitraumJahr.click();
+
+        if (string5.equalsIgnoreCase("Jahr")) {
+            new GehaltsrechnerPage().zeitraumJahr.click();
+        } else new GehaltsrechnerPage().zeitraumMonat.click();
+
         new GehaltsrechnerPage().geburtsJahr.sendKeys(string6);
         Select select1 = new Select(new GehaltsrechnerPage().steuerklasse);
         select1.selectByVisibleText(string7);
         new GehaltsrechnerPage().faktor.sendKeys(string8);
-        new GehaltsrechnerPage().rentenversicherungJaWest.click();
-        new GehaltsrechnerPage().kirchensteuerNein.click();
-        new GehaltsrechnerPage().wohnort.sendKeys(string11);
+        if (string9.equalsIgnoreCase("Ja (West)")) {
+            new GehaltsrechnerPage().rentenversicherungJaWest.click();
+        } else if (string9.equalsIgnoreCase("Ja (Ost)")) {
+            new GehaltsrechnerPage().rentenversicherungJaOst.click();
+        } else new GehaltsrechnerPage().rentenversicherungNein.click();
+
+        if (string10.equalsIgnoreCase("Ja")) {
+            new GehaltsrechnerPage().kirchensteuerJa.click();
+        } else new GehaltsrechnerPage().kirchensteuerNein.click();
+
+        new GehaltsrechnerPage().wohnort.sendKeys(string11.toLowerCase(Locale.ROOT));
         Select select2 = new Select(new GehaltsrechnerPage().bundesland);
         select2.selectByVisibleText(string12);
         Select select3 = new Select(new GehaltsrechnerPage().krankenkasse);
@@ -44,5 +61,6 @@ public class GehaltsrechnerStepDefs {
         System.out.println(new GehaltsrechnerPage().Ihrergebnis.getText());
 
         Assert.assertTrue(new GehaltsrechnerPage().Ihrergebnis.getText().contains("Netto 44.013,75 € 3.667,81 €"));
+
     }
 }
