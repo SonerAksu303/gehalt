@@ -41,7 +41,7 @@ public class GehaltsrechnerStepDefs {
             new GehaltsrechnerPage().kirchensteuerJa.click();
         } else new GehaltsrechnerPage().kirchensteuerNein.click();
 
-        new GehaltsrechnerPage().wohnort.sendKeys(string11.toLowerCase(Locale.ROOT));
+        new GehaltsrechnerPage().wohnort.sendKeys(string11);
         Select select2 = new Select(new GehaltsrechnerPage().bundesland);
         select2.selectByVisibleText(string12);
         Select select3 = new Select(new GehaltsrechnerPage().krankenkasse);
